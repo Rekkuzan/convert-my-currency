@@ -67,7 +67,7 @@ namespace Rekkuzan.ConvertMyCurrency.UI
             SetCurrencyModalEnable(false);
             UpdateInputsCurrencyOne(code01);
             UpdateInputsCurrencyTwo(code02);
-            SetDate(string.Format("{0:yyyy-mm-dd}", System.DateTime.Now));
+            SetDate(string.Format("{0:yyyy-MM-dd}", System.DateTime.Now.Date));
             SetLoading(false);
             StartCoroutine(InitializeCoroutine(OnCurrencySelected));
         }
@@ -166,6 +166,7 @@ namespace Rekkuzan.ConvertMyCurrency.UI
         public void SetCurrencyModalEnable(bool enable)
         {
             ModalCurreny.SetActive(enable);
+            CurrencyInputField.text = string.Empty;
         }
 
         /// <summary>

@@ -59,7 +59,7 @@ namespace Rekkuzan.DatePicker
             DateTime dateTime = System.DateTime.Now;
             try
             {
-                dateTime = DateTime.ParseExact(date, "yyyy-mm-dd", System.Globalization.CultureInfo.InvariantCulture);
+                dateTime = DateTime.ParseExact(date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
             }
             catch (Exception e)
             {
@@ -70,12 +70,9 @@ namespace Rekkuzan.DatePicker
         }
     }
 
-#if UNITY_ANDROID && true
+#if UNITY_ANDROID && !UNITY_EDITOR
     public static class NativeDatePickerAndroid
     {
-        private static AndroidJavaClass mDatePickerClass = null;
-        private static bool mInitialized = false;
-
         public static void Show(string ObjectName, string ObjectMethod)
         {
             using (var mDatePickerClass = new AndroidJavaClass("com.rekkuzan.datepicker.DatePickerUnity"))
@@ -85,7 +82,7 @@ namespace Rekkuzan.DatePicker
         }
     }
 #endif
-#if UNITY_IOS
+#if UNITY_IOS && !UNITY_EDITOR
     public static class NativeDatePickeriOS
     {
         [DllImport("__Internal")]

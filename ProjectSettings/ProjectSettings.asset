@@ -682,7 +682,10 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
     Collab: 1
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -703,9 +706,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 4ee1ad31-0403-4bcf-9af1-8109ab8b7b50
+  cloudProjectId: 8e50b536-8194-4abe-a59e-ca7b92678d95
   framebufferDepthMemorylessMode: 0
-  projectName: ConvertMyCurrency
+  projectName: ConvertMyCurrency (1)
   organizationId: peterpersonal
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

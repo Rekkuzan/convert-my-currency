@@ -60,7 +60,7 @@ namespace Rekkuzan.ConvertMyCurrency
         {
             Rekkuzan.DatePicker.NativeDatePicker.Instance.RequestDatePicker(e =>
             {
-                string dateFormat = string.Format("{0:yyyy-mm-dd}", e);
+                string dateFormat = string.Format("{0:yyyy-MM-dd}", e.Date);
                 if (e.Date != System.DateTime.Now.Date)
                     CurrentDateRequested = dateFormat;
                 uIManager.SetDate(dateFormat);
@@ -121,6 +121,8 @@ namespace Rekkuzan.ConvertMyCurrency
                 {
                     // error to handle
                     Debug.LogError("An error occured");
+                    uIManager.SetResultText("An error occured, please try again.");
+                    uIManager.SetLoading(false);
                     return;
                 }
 
