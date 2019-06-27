@@ -1,0 +1,2 @@
+-define:UNITY_LOG_DISABLE
+-nowarn:0649
